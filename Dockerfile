@@ -13,20 +13,20 @@ ENV tempenv=ABC
 
 #Adding ARG variables with default values
 
-ARG myargument=default_value
+#ARG myargument=default_value
 
-RUN echo Argument value = $myargument \
-current environment value = $tempenv
+#RUN echo Argument value = $myargument \
+#current environment value = $tempenv
 
-RUN apt-get update && apt-get install -y  wget
-#RUN echo hello from dockerfile
+#RUN apt-get update && apt-get install -y  wget
+RUN echo hello from dockerfile
 
 # Creating a folder
-RUN mkdir /myvol
+#RUN mkdir /myvol
 
 # copying files and folder
-copy file* /myvol/
-ADD dir1 /myvol/folder1
+#copy file* /myvol/
+#ADD dir1 /myvol/folder1
 
 # CMD Entry without an entry point
 #CMD echo "This will be executed via CMD"
@@ -34,7 +34,7 @@ ADD dir1 /myvol/folder1
 # Another format for CMD
 #CMD ["/bin/bash","-c","echo hello"]
 
-CMD ["ls -l"]
+#CMD ["ls -l"]
 
 # Adding Entrypoint 
-ENTRYPOINT ["bash","-c"]
+#ENTRYPOINT ["bash","-c"]
